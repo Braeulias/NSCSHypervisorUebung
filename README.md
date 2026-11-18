@@ -29,16 +29,6 @@ Progress is saved under `alpentech-lab-interactive-v1` in localStorage. Refreshi
 
 `src/lab.ts` contains validation and recovery rules; `src/main.tsx` implements the interface; `tests/lab.test.ts` checks core behavior. See `INSTRUCTOR.md` for the German instructor guide. No scoring is used. The activity includes discussion and a networking troubleshooting exercise.
 
-## Git in this workspace
-
-The environment mounts the root `.git` directory read-only, so repository metadata is stored in `.git-local/`. Use `./repo-git status`, `./repo-git log`, and other normal Git arguments. The wrapper supplies the metadata and working-tree paths; it does not change Git behavior. On an unrestricted machine, use a standard clone of this repository:
-
-```sh
-git clone /absolute/path/to/presentation/.git-local alpentech-lab
-```
-
-The network controls now enforce the exercise order: Company network unlocks only after the isolated-network failure and correct diagnosis. A prominent Next action box gives exact control names for the current step. Older saves that skipped the investigation retain the VM but return it powered off and disconnected for the guided exercise.
-
 ## Interactive experiment
 
 This checkout is on `experiment/interactive-network`. The original classroom version is preserved on `main` and tagged `classroom-ready` (`fb976e1`). Return to it with:
